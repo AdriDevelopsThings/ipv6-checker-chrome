@@ -1,0 +1,23 @@
+{
+	"name": "IPv6 Checker",
+	"version": "1.0.0",
+	"description": "Shows if a website does support IPv6 or not",
+	"manifest_version": 3,
+	"author": "AdriDoesThings <adri@adridoesthings.com>",
+	"permissions": [
+		"tabs"
+	],
+	"host_permissions": ["<all_urls>"],
+	"background": {
+		"service_worker": "sw.js"
+	},
+	"action": {
+		"default_title": "IPv6 Checker"
+	},
+	"icons": {
+		"16": "icon.png",
+		"32": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	}
+}
