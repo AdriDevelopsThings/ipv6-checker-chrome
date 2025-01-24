@@ -2,6 +2,10 @@ const TLD_BLACKLIST = ['local', 'onion']
 const cache = {}
 
 async function getIPv6SupportByHostname(hostname) {
+	if(!hostname) {
+		return 'UNKNOWN'
+	}
+	
 	// an ipv6 address itself obviously supports ipv6
 	if (hostname.match(/^\[[0-9a-f\:\.]*\]$/g)) {
 		// TODO: implement ::ffff:0:0/96 addresses
@@ -20,7 +24,7 @@ async function getIPv6SupportByHostname(hostname) {
 	const zones = hostname.split('.').filter(zone => zone !== '') // filter out root zone if needed
 
 	if (
-		zones.length === 1 || // a / aaaa records on tlds are very rare, so we just assume there aren't any
+		zones.length <= 1 || // a / aaaa records on tlds are very rare, so we just assume there aren't any
 		TLD_BLACKLIST.includes(zones[zones.length - 1])
 	) {
 		return 'UNKNOWN'
