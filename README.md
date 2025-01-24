@@ -1,5 +1,5 @@
 # ipv6-checker-chrome extension
-A Chrome extension that shows if the website currently viewed does support ipv6 or not.
+A Chrome extension that shows if the website currently viewed supports IPv6 or doesn't
 
 ## Install
 1. Download the `crx` file from the newest release
@@ -9,4 +9,4 @@ A Chrome extension that shows if the website currently viewed does support ipv6 
 5. Install
 
 ## DATA PROTECTION WARNING
-This extension resolves every website you view with the http dns api of cloudflare. If you don't want to share all website domains to cloudflare you shouldn't use this extension. 
+This extension resolves every domain you visit with the Cloudflare DNS over HTTPS resolver. If you don't want to share all domains you visit with Cloudflare you shouldn't use this extension.
